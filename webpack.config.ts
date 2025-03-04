@@ -1,11 +1,12 @@
 import path from "path";
-import { Configuration } from "webpack";
+import type { Configuration } from "webpack";
 import CopyWebpackPlugin from "copy-webpack-plugin";
+import { dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+    
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const config: Configuration = {
-  mode:
-    (process.env.NODE_ENV as "production" | "development" | undefined) ??
-    "development",
   entry: "./src/entrypoint.tsx",
   module: {
     rules: [
