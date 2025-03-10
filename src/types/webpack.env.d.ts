@@ -1,12 +1,10 @@
 /// <reference types="webpack/env" />
 
-interface CustomEnv {
-  readonly name?: string
-}
+import { EnvSchemaType } from "../utils/env/schema";
 
 declare global {
   namespace NodeJS {
-    interface ProcessEnv extends CustomEnv {
+    interface ProcessEnv extends EnvSchemaType {
     }
   }
 }
