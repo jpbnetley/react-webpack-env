@@ -2,6 +2,9 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 
+
+console.log('name', import.meta.env.name)
+
 const rootElement = document.getElementById("root");
 
 // New as of React18

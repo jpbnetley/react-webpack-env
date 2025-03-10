@@ -3,7 +3,8 @@ import type { Configuration } from "webpack";
 import CopyWebpackPlugin from "copy-webpack-plugin";
 import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-    
+import Dotenv from 'dotenv-webpack'
+
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const config: Configuration = {
@@ -32,6 +33,9 @@ const config: Configuration = {
     new CopyWebpackPlugin({
       patterns: [{ from: "public" }],
     }),
+    new Dotenv({
+      prefix: 'import.meta.env.'
+    })
   ],
 };
 
