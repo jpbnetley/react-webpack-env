@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "serve:prod":"pnpm dlx serve dist"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -13,7 +14,7 @@
   },
   "devDependencies": {
     "@types/dotenv-webpack": "^7.0.8",
-    "@types/node": "^22.13.9",
+    "@types/node": "^22.13.10",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "copy-webpack-plugin": "^13.0.0",

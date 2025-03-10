@@ -1,10 +1,15 @@
 /// <reference types="webpack/env" />
 
-interface ImportMetaEnv {
-  readonly name: string
-  // more env variables...
+interface CustomEnv {
+  readonly name?: string
 }
 
-interface ImportMeta {
-  readonly env: ImportMetaEnv
+declare global {
+  namespace NodeJS {
+    interface ProcessEnv extends CustomEnv {
+    }
+  }
 }
+
+// empty export required for ts to find global type.
+export {}

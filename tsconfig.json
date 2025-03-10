@@ -10,7 +10,7 @@
     "outDir": "dist",
     "moduleResolution": "node",
     "module": "ES2020",
-    "types": ["./src/types/webpack.env.d.ts"]
+    "types": ["./src/types/webpack.env.d.ts"],
   },
   "include": ["**/*.ts", "**/*.tsx"],
 }
