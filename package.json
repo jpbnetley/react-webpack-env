@@ -5,18 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "webpack serve --mode development",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "serve:prod": "pnpm dlx serve dist"
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "zod": "3.24.2"
   },
   "devDependencies": {
-    "@types/node": "^22.13.9",
+    "@types/dotenv-webpack": "^7.0.8",
+    "@types/node": "^22.13.10",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
+    "dotenv-webpack": "^8.1.0",
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
